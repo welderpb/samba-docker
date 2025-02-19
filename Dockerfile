@@ -6,7 +6,7 @@ VOLUME ["/shares"]
 
 EXPOSE 137/udp 139 445
 
-COPY ./smbusers /
+COPY ./smbusers /opt/
 
 COPY ./entrypoint.sh /
 RUN chmod +x /entrypoint.sh

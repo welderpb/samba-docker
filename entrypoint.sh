@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #add smb users from file
-tr -d '\r' </smbusers | while read USER
+tr -d '\r' </opt/smbusers | while read USER
 do
     IFS=':' read -r user uid pass <<EOF
 $USER
