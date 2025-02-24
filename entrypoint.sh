@@ -7,7 +7,7 @@ do
 $USER
 EOF
 
-    adduser -u ${uid} -H -h /var/empty -D -s /sbin/nologin ${user}
+    adduser -u ${uid} -G users -H -h /var/empty -D -s /sbin/nologin ${user}
     echo "${pass}" | tee - | smbpasswd -s -c /etc/samba/smb.conf -a ${user}
 done
 
