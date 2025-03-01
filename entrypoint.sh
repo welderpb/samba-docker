@@ -8,7 +8,7 @@ $USER
 EOF
     addgroup -g ${uid} ${user}
     adduser -u ${uid} -G ${user} -H -h /var/empty -D -s /sbin/nologin ${user}
-    addgroup ${welder} users
+    addgroup ${user} users
     echo "${pass}" | tee - | smbpasswd -s -c /etc/samba/smb.conf -a ${user}
 done
 
